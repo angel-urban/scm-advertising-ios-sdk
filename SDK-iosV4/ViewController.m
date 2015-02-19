@@ -8,6 +8,10 @@
 
 #import "ViewController.h"
 
+#import "PAOWebView.h"
+
+#import "SDK_iosV4-Swift.h" //<-Importacion del archi cabecera de Swift
+
 @interface ViewController ()
 
 @end
@@ -17,6 +21,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    //Objetive-C
+    Publicidad = [[PAOWebView alloc]init];
+    [self.view addSubview:Publicidad.RetornarBanner];
+    
+    //Swift
+    //Banner = [[WebViewPAO alloc]init];
+    //[self.view addSubview:Banner.RetornarPublicidad];
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

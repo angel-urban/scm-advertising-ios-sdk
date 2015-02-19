@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PAOWebView.h"
+#import "SDK_iosV4-Swift.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController {
+    PAOWebView *Publicidad;
+    WebViewPAO *Banner;
 
+}
 
 @end
 
