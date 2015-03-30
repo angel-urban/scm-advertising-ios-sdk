@@ -5,12 +5,14 @@
 //  Created by angel.urban on 16/2/15.
 //  Copyright (c) 2015 SCMSpain. All rights reserved.
 //
-//Clase para crear el Objeto UIWebView con Swift
+
+
+//===========CLASE PARA CREAR EL BANNER EN SWIFT=================//
 
 import Foundation
 import UIKit
 
-@objc class WebViewPAO: NSObject, UIWebViewDelegate {
+@objc class WebViewPAO:  NSObject, UIWebViewDelegate {
     
     
     var Publicidad:UIWebView!
@@ -30,7 +32,7 @@ import UIKit
     
     func RetornarPublicidad ()->UIWebView
     {
-        
+        Publicidad.autoresizingMask = UIViewAutoresizing.FlexibleWidth
         Publicidad.delegate = self
         Publicidad.loadRequest(self.loadURL())
         
@@ -39,14 +41,14 @@ import UIKit
     
     func loadURL ()->NSURLRequest {
         
-        var vul:ViewPAO = ViewPAO()
-       var request:NSURLRequest = vul.loadURL()
+        var vul:FilterPAO = FilterPAO()
+        var request:NSURLRequest = vul.loadURL()
         
         return request
         
     }
     
-
+    
 //pragma mark - Web View Delegate Methods
     
     func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
@@ -54,6 +56,7 @@ import UIKit
         if navigationType == UIWebViewNavigationType.LinkClicked
         {
             UIApplication.sharedApplication().openURL(request.URL)
+            print(request.URL);
             return false
         }
         
@@ -83,7 +86,8 @@ import UIKit
         {
             Publicidad.hidden = true
         }
-    }
+        
+     }
     
     func webView(webView: UIWebView, didFailLoadWithError error: NSError) {
         

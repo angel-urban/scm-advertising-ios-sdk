@@ -16,21 +16,34 @@
 
 @end
 
-@implementation ViewController
+@implementation ViewController {
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    //Seteo de las variables desde portal
+    NSString *a = @"x65";
+    NSString *b = @"parrilla";
+    NSString *c = @"COCHES";
+    NSString *d = @"&oasGeoRegion=44&";
+    
+    //Clase FilterPAO
+    FilterPAO *filter = [[FilterPAO alloc]init];
+    [filter setPosicion:a];
+    [filter setPage:b];
+    [filter setSite:c];
+    [filter setQuery:d];
+    
     //Objetive-C
-    Publicidad = [[PAOWebView alloc]init];
-    [self.view addSubview:Publicidad.RetornarBanner];
+    //Publicidad = [[PAOWebView alloc]init];
+    //[self.view addSubview:Publicidad.RetornarBanner];
+    
     
     //Swift
-    //Banner = [[WebViewPAO alloc]init];
-    //[self.view addSubview:Banner.RetornarPublicidad];
-    
-    
+    Banner = [[WebViewPAO alloc]init];
+    [self.view addSubview:Banner.RetornarPublicidad];
     
 }
 

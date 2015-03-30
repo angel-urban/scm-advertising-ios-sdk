@@ -17,7 +17,6 @@
 		CE28132A1A8E0B0E0094C29B /* SDK_iosV4Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2813291A8E0B0E0094C29B /* SDK_iosV4Tests.m */; };
 		CE2813361A8E0B2D0094C29B /* FilterPAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2813351A8E0B2D0094C29B /* FilterPAO.swift */; };
 		CE2813391A8E0B8E0094C29B /* PAOWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2813381A8E0B8E0094C29B /* PAOWebView.m */; };
-		CE28133B1A8E0D010094C29B /* ViewPAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE28133A1A8E0D010094C29B /* ViewPAO.swift */; };
 		CEF7D5481A9210E100ADAAE0 /* WebViewPAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7D5471A9210E100ADAAE0 /* WebViewPAO.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,7 +49,6 @@
 		CE2813351A8E0B2D0094C29B /* FilterPAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterPAO.swift; sourceTree = "<group>"; };
 		CE2813371A8E0B8E0094C29B /* PAOWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAOWebView.h; sourceTree = "<group>"; };
 		CE2813381A8E0B8E0094C29B /* PAOWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAOWebView.m; sourceTree = "<group>"; };
-		CE28133A1A8E0D010094C29B /* ViewPAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPAO.swift; sourceTree = "<group>"; };
 		CEF7D5471A9210E100ADAAE0 /* WebViewPAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewPAO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,7 +135,6 @@
 			children = (
 				CE21E09D1A9629A30010A24D /* devicelist.swift */,
 				CE2813351A8E0B2D0094C29B /* FilterPAO.swift */,
-				CE28133A1A8E0D010094C29B /* ViewPAO.swift */,
 				CE2813371A8E0B8E0094C29B /* PAOWebView.h */,
 				CE2813381A8E0B8E0094C29B /* PAOWebView.m */,
 				CE2813341A8E0B2C0094C29B /* SDK-iosV4-Bridging-Header.h */,
@@ -247,7 +244,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE2813361A8E0B2D0094C29B /* FilterPAO.swift in Sources */,
-				CE28133B1A8E0D010094C29B /* ViewPAO.swift in Sources */,
 				CE2813391A8E0B8E0094C29B /* PAOWebView.m in Sources */,
 				CEF7D5481A9210E100ADAAE0 /* WebViewPAO.swift in Sources */,
 				CE2813161A8E0B0E0094C29B /* ViewController.m in Sources */,
@@ -312,6 +308,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -332,6 +329,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -353,6 +351,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -366,6 +365,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -376,10 +376,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "SDK-iosV4/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9fd8e07f-bf13-470c-961f-06e67f1a27c0";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SDK-iosV4/SDK-iosV4-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -390,10 +391,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = "SDK-iosV4/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9fd8e07f-bf13-470c-961f-06e67f1a27c0";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SDK-iosV4/SDK-iosV4-Bridging-Header.h";
 			};
 			name = Release;
