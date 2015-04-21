@@ -101,9 +101,9 @@ var _query:String = ""
         sistem = UIDevice.currentDevice().systemVersion
         
         //INFO BUILD SDK
-        let appInfo = NSBundle.mainBundle().infoDictionary as Dictionary<String,AnyObject>
-        let shortVersionString = appInfo["CFBundleShortVersionString"] as String
-        let bundleVersion      = appInfo["CFBundleVersion"] as String
+        let appInfo = NSBundle.mainBundle().infoDictionary as! Dictionary<String,AnyObject>
+        let shortVersionString = appInfo["CFBundleShortVersionString"] as! String
+        let bundleVersion      = appInfo["CFBundleVersion"] as! String
         //let versionSDK = bundleVersion.toInt()!*10000
         //var sdkver = String(versionSDK)
         var sdkver = sdkversion*10000
@@ -112,12 +112,18 @@ var _query:String = ""
         
         //Encoding query
         let Queris = self.getQuery()
-        let escaped = CFURLCreateStringByAddingPercentEscapes(nil, Queris, nil, "/%&=?$#+-~@<>|\\*,.()[]{}^!", CFStringBuiltInEncodings.UTF8.rawValue)
+        let escaped = CFURLCreateStringByAddingPercentEscapes(nil, Queris, nil, "/%&=?$#+-~@<>|\\*,.()[]{}^!", CFStringBuiltInEncodings.UTF8.rawValue) as! String
         
         
         var baseURL = NSURL (string: "http://static-advertising.scmspain.com/pao_ios_sdk/1.0/ios-sdk.html")
         
-        _url = "?site="+self.getSite()+"&page="+self.getPage()+"&pos="+self.getPosicion()+"&make="+make+"&model="+device+"&vsdk="+shortVersionString+"&vsdkint="+versionSDK+"&phonever="+sistem+"&phoneapi="+sistem+"&query="+escaped
+       // _url = "?site="+self.getSite()+"&page="+self.getPage()+"&pos="+self.getPosicion()+"&make="+make+"&model="+device+"&vsdk="+shortVersionString+"&vsdkint="+versionSDK+"&phonever="+sistem+"&phoneapi="+sistem+"&query="+escaped
+        
+        _url = "?site="+self.getSite()+"&page="+self.getPage()+"&pos="+self.getPosicion()
+        _url += "&make="+make+"&model="+device+"&vsdk="+shortVersionString
+        _url += "&vsdkint="+versionSDK+"&phonever="+sistem+"&phoneapi="+sistem
+        _url += "&query="+escaped
+
         
         var url = NSURL(string: _url, relativeToURL: baseURL)
         

@@ -55,7 +55,7 @@ import UIKit
         
         if navigationType == UIWebViewNavigationType.LinkClicked
         {
-            UIApplication.sharedApplication().openURL(request.URL)
+            UIApplication.sharedApplication().openURL(request.URL!)
             print(request.URL);
             return false
         }

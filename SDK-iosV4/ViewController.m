@@ -26,7 +26,7 @@
     //Seteo de las variables desde portal
     NSString *a = @"x65";
     NSString *b = @"parrilla";
-    NSString *c = @"COCHES";
+    NSString *c = @"INFOJOBS";
     NSString *d = @"&oasGeoRegion=44&";
     
     //Clase FilterPAO
